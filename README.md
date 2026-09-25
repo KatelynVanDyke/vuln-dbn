@@ -10,9 +10,7 @@ variable back into an earlier (`__t0`) one."
 ## 1. Setup
 
 ```
-git clone git@github.com:KatelynVanDyke/vuln-dbn.git
-cd vuln-dbn
-uv sync
+git clone git@github.com:KatelynVanDyke/vuln-dbn.git && cd vuln-dbn && uv sync
 ```
 
 That's it — `data/java/wide_two_slice_table.csv` is already committed in the repo, so there's
@@ -32,23 +30,14 @@ Both share the same `learn` command; the only difference is the `--sink` flag.
 
 **Experiment A — pure structure learning** (no sink, only the temporal constraint):
 ```
-uv run vuln-dbn learn \
-    --dataset data/java/wide_two_slice_table.csv \
-    --model models/java_structure.joblib \
-    --summary results/java_structure_summary.json \
-    --checkpoint results/java_structure.checkpoint
+uv run vuln-dbn learn --dataset data/java/wide_two_slice_table.csv --model models/java_structure.joblib --summary results/java_structure_summary.json --checkpoint results/java_structure.checkpoint
 ```
 Describes how change types co-occur and evolve across slices. No single prediction target.
 
 **Experiment B — targeted** (`TRANSITION_LABEL__t1` constrained as a pure sink, like the
 static repo's `OUTCOME`):
 ```
-uv run vuln-dbn learn \
-    --dataset data/java/wide_two_slice_table.csv \
-    --model models/java_sink.joblib \
-    --summary results/java_sink_summary.json \
-    --sink TRANSITION_LABEL__t1 \
-    --checkpoint results/java_sink.checkpoint
+uv run vuln-dbn learn --dataset data/java/wide_two_slice_table.csv --model models/java_sink.joblib --summary results/java_sink_summary.json --sink TRANSITION_LABEL__t1 --checkpoint results/java_sink.checkpoint
 ```
 This unlocks the target-dependent commands below.
 
@@ -58,21 +47,21 @@ repo benefits from extra CPUs (see §4), so this is the one place multiple cores
 ## 3. Downstream analysis (Experiment B's model only)
 
 ```
-uv run vuln-dbn evaluate --dataset data/java/wide_two_slice_table.csv \
-    --output results/java_eval.json --sink TRANSITION_LABEL__t1
-
-uv run vuln-dbn mi --dataset data/java/wide_two_slice_table.csv \
-    --output results/java_mi.csv --sink TRANSITION_LABEL__t1
-
-uv run vuln-dbn bootstrap --dataset data/java/wide_two_slice_table.csv \
-    --output results/java_bootstrap.json --sink TRANSITION_LABEL__t1
-
+uv run vuln-dbn evaluate --dataset data/java/wide_two_slice_table.csv --output results/java_eval.json --sink TRANSITION_LABEL__t1
+```
+```
+uv run vuln-dbn mi --dataset data/java/wide_two_slice_table.csv --output results/java_mi.csv --sink TRANSITION_LABEL__t1
+```
+```
+uv run vuln-dbn bootstrap --dataset data/java/wide_two_slice_table.csv --output results/java_bootstrap.json --sink TRANSITION_LABEL__t1
+```
+```
 uv run vuln-dbn dot --summary results/java_sink_summary.json --output results/java_sink.dot
+```
 
-# evidence.json: {"evidence": {"CT__SOME_TYPE__t0": 1, "TRANSITION_LABEL__t0": "OTHER"}}
-# unlisted nodes are marginalized, not assumed absent -- not every node is a binary indicator
-uv run vuln-dbn predict --model models/java_sink.joblib \
-    --evidence evidence.json --output results/prediction.json
+`predict` takes an evidence JSON file, e.g. `{"evidence": {"CT__SOME_TYPE__t0": 1, "TRANSITION_LABEL__t0": "OTHER"}}` -- unlisted nodes are marginalized, not assumed absent, since not every node is a binary indicator:
+```
+uv run vuln-dbn predict --model models/java_sink.joblib --evidence evidence.json --output results/prediction.json
 ```
 
 `bootstrap`/`mi`/`dot` also work on a no-sink (Experiment A) model/dataset; `evaluate` and
