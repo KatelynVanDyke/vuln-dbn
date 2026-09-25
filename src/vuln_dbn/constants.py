@@ -1,0 +1,9 @@
+T0_SUFFIX = "__t0"
+T1_SUFFIX = "__t1"
+
+TRANSITION_LABEL = "TRANSITION_LABEL"
+DEFAULT_SINK = f"{TRANSITION_LABEL}{T1_SUFFIX}"
+
+ANCHOR_ID = "anchor_id"
+PROJECT = "project"
+METADATA_COLUMNS = [ANCHOR_ID, PROJECT, "slice_offset_t0", "slice_offset_t1"]
