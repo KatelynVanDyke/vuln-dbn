@@ -7,49 +7,100 @@ change-type tables produced by [vuln-commit-history](../vuln-commit-history). Ad
 "OUTCOME must be a sink" constraint generalized to "no edge from a later (`__t1`) slice
 variable back into an earlier (`__t0`) one."
 
-## Input
-
-A `wide_two_slice_table.csv` from `vuln-commit-history`'s `dbn_encode.build_wide_two_slice_table`:
-one row per consecutive pair of history slices, columns `anchor_id`, `project`,
-`slice_offset_t0`, `slice_offset_t1`, `TRANSITION_LABEL__t0`, `TRANSITION_LABEL__t1`, and a
-`CT__*__t0`/`CT__*__t1` pair per retained change-type feature.
-
-## Two experiments, one `--sink` flag
-
-- **Pure structure learning** (`learn` with no `--sink`): only the temporal constraint
-  applies. Describes how change types co-occur and evolve across slices, no single
-  prediction target.
-- **Targeted** (`learn --sink TRANSITION_LABEL__t1`): additionally constrains that node to be
-  a pure sink, matching the static repo's OUTCOME pattern. Unlocks `evaluate`/`predict`/`mi`,
-  which all require a designated sink.
-
-`bootstrap` and `dot` work in either mode.
-
-## Setup
+## 1. Setup
 
 ```
-uv sync   # or: pip install -e .
+git clone git@github.com:KatelynVanDyke/vuln-dbn.git
+cd vuln-dbn
+uv sync
 ```
 
-## Usage
+That's it — `data/java/wide_two_slice_table.csv` is already committed in the repo, so there's
+no separate data-transfer step for the Java dataset. (C and C++ versions will land in
+`data/c/` / `data/cpp/` the same way once that extraction finishes upstream.)
+
+Every command below is run from this directory (the one with `pyproject.toml` in it), using
+`uv run` so you don't need to separately activate the virtualenv:
 
 ```
-vuln-dbn learn --dataset wide_two_slice_table.csv --model model.joblib --summary summary.json \
-    --checkpoint checkpoint.joblib   # omit --sink for the pure-structure-learning experiment
+uv run vuln-dbn <command> ...
+```
 
-vuln-dbn learn --dataset wide_two_slice_table.csv --model model.joblib --summary summary.json \
-    --sink TRANSITION_LABEL__t1 --checkpoint checkpoint.joblib
+## 2. The two experiments
 
-vuln-dbn evaluate --dataset wide_two_slice_table.csv --output eval.json --sink TRANSITION_LABEL__t1
-vuln-dbn mi --dataset wide_two_slice_table.csv --output mi.csv --sink TRANSITION_LABEL__t1
-vuln-dbn bootstrap --dataset wide_two_slice_table.csv --output bootstrap.json --sink TRANSITION_LABEL__t1
-vuln-dbn dot --summary summary.json --output graph.dot
+Both share the same `learn` command; the only difference is the `--sink` flag.
+
+**Experiment A — pure structure learning** (no sink, only the temporal constraint):
+```
+uv run vuln-dbn learn \
+    --dataset data/java/wide_two_slice_table.csv \
+    --model models/java_structure.joblib \
+    --summary results/java_structure_summary.json \
+    --checkpoint results/java_structure.checkpoint
+```
+Describes how change types co-occur and evolve across slices. No single prediction target.
+
+**Experiment B — targeted** (`TRANSITION_LABEL__t1` constrained as a pure sink, like the
+static repo's `OUTCOME`):
+```
+uv run vuln-dbn learn \
+    --dataset data/java/wide_two_slice_table.csv \
+    --model models/java_sink.joblib \
+    --summary results/java_sink_summary.json \
+    --sink TRANSITION_LABEL__t1 \
+    --checkpoint results/java_sink.checkpoint
+```
+This unlocks the target-dependent commands below.
+
+Run A and B as two separate processes if you want them in parallel — nothing else in this
+repo benefits from extra CPUs (see §4), so this is the one place multiple cores actually help.
+
+## 3. Downstream analysis (Experiment B's model only)
+
+```
+uv run vuln-dbn evaluate --dataset data/java/wide_two_slice_table.csv \
+    --output results/java_eval.json --sink TRANSITION_LABEL__t1
+
+uv run vuln-dbn mi --dataset data/java/wide_two_slice_table.csv \
+    --output results/java_mi.csv --sink TRANSITION_LABEL__t1
+
+uv run vuln-dbn bootstrap --dataset data/java/wide_two_slice_table.csv \
+    --output results/java_bootstrap.json --sink TRANSITION_LABEL__t1
+
+uv run vuln-dbn dot --summary results/java_sink_summary.json --output results/java_sink.dot
 
 # evidence.json: {"evidence": {"CT__SOME_TYPE__t0": 1, "TRANSITION_LABEL__t0": "OTHER"}}
 # unlisted nodes are marginalized, not assumed absent -- not every node is a binary indicator
-vuln-dbn predict --model model.joblib --evidence evidence.json --output prediction.json
+uv run vuln-dbn predict --model models/java_sink.joblib \
+    --evidence evidence.json --output results/prediction.json
 ```
 
-Structure learning over the full feature set (hundreds of `__t0`/`__t1` columns) is
-CPU-heavy -- `--checkpoint` makes a long run resumable (Ctrl-C-safe), which matters most on a
-remote VM you might need to reconnect to.
+`bootstrap`/`mi`/`dot` also work on a no-sink (Experiment A) model/dataset; `evaluate` and
+`predict` specifically need a sink, since they're inherently about a prediction target.
+
+## 4. Compute sizing (e.g. for a Hellbender / SLURM job)
+
+- **CPU only, no GPU.** `HillClimbSearch`'s candidate-edge scan is a plain single-threaded
+  Python generator (verified against the installed pgmpy source) -- no `n_jobs`, nothing a
+  GPU would accelerate. A GPU allocation would sit idle.
+- **1 node.** Nothing here is distributed across machines.
+- **Memory: request ~4GB.** Measured peak on the real 940-column Java dataset was ~454MB;
+  4GB gives comfortable headroom. Memory is cheap to over-request on a shared cluster --
+  unlike CPU/GPU, it doesn't cost queue priority the way over-asking for cores does.
+- **Walltime: budget generously, and use `--checkpoint`.** The first iteration alone (scoring
+  every candidate edge from scratch, ~880,000 of them for 940 variables) took several minutes
+  and hadn't finished in local testing; a full run to convergence is plausibly hours or more.
+  `--checkpoint path --resume` makes a run resumable across multiple job submissions if your
+  cluster caps individual job walltime -- re-run the exact same command with `--resume` added.
+- **CPUs: 2 is enough to run Experiments A and B side by side** as separate processes (a
+  single `learn` call won't use more than one core). Only go higher than that if you also want
+  `bootstrap` parallelized across its resampling repetitions -- that's not implemented yet, so
+  ask before relying on it.
+
+## 5. Data format
+
+`wide_two_slice_table.csv`: one row per consecutive pair of history slices, columns
+`anchor_id`, `project`, `slice_offset_t0`, `slice_offset_t1`, `TRANSITION_LABEL__t0`,
+`TRANSITION_LABEL__t1`, and a `CT__*__t0`/`CT__*__t1` pair per retained change-type feature.
+`long_table_metadata.json` alongside it records how the feature set was built (`min_support`,
+transition/anchor counts) in `vuln-commit-history`.

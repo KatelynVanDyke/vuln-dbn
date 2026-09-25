@@ -1,0 +1,1806 @@
+{
+  "min_support": 5,
+  "feature_columns": [
+    "CT__DELETE_NODE_ANNOTATION_CLASS",
+    "CT__DELETE_NODE_ANNOTATION_METHOD",
+    "CT__DELETE_NODE_ANONYMOUSEXECUTABLE_CLASS",
+    "CT__DELETE_NODE_ASSIGNMENT_BLOCK",
+    "CT__DELETE_NODE_ASSIGNMENT_CASE",
+    "CT__DELETE_NODE_BINARYOPERATOR_ASSIGNMENT",
+    "CT__DELETE_NODE_BINARYOPERATOR_BINARYOPERATOR",
+    "CT__DELETE_NODE_BINARYOPERATOR_CONDITIONAL",
+    "CT__DELETE_NODE_BINARYOPERATOR_CONSTRUCTORCALL",
+    "CT__DELETE_NODE_BINARYOPERATOR_IF",
+    "CT__DELETE_NODE_BINARYOPERATOR_INVOCATION",
+    "CT__DELETE_NODE_BINARYOPERATOR_LOCALVARIABLE",
+    "CT__DELETE_NODE_BINARYOPERATOR_RETURN",
+    "CT__DELETE_NODE_BLOCK_IF",
+    "CT__DELETE_NODE_BREAK_BLOCK",
+    "CT__DELETE_NODE_BREAK_CASE",
+    "CT__DELETE_NODE_CASE_SWITCH",
+    "CT__DELETE_NODE_CATCH_TRY",
+    "CT__DELETE_NODE_CLASS_CLASS",
+    "CT__DELETE_NODE_CONDITIONAL_ASSIGNMENT",
+    "CT__DELETE_NODE_CONDITIONAL_INVOCATION",
+    "CT__DELETE_NODE_CONDITIONAL_LOCALVARIABLE",
+    "CT__DELETE_NODE_CONDITIONAL_RETURN",
+    "CT__DELETE_NODE_CONSTRUCTORCALL_ASSIGNMENT",
+    "CT__DELETE_NODE_CONSTRUCTORCALL_CONSTRUCTORCALL",
+    "CT__DELETE_NODE_CONSTRUCTORCALL_FIELD",
+    "CT__DELETE_NODE_CONSTRUCTORCALL_INVOCATION",
+    "CT__DELETE_NODE_CONSTRUCTORCALL_LOCALVARIABLE",
+    "CT__DELETE_NODE_CONSTRUCTORCALL_RETURN",
+    "CT__DELETE_NODE_CONSTRUCTOR_CLASS",
+    "CT__DELETE_NODE_EXECUTABLEREFERENCEEXPRESSION_INVOCATION",
+    "CT__DELETE_NODE_FIELDREAD_ASSIGNMENT",
+    "CT__DELETE_NODE_FIELDREAD_BINARYOPERATOR",
+    "CT__DELETE_NODE_FIELDREAD_CASE",
+    "CT__DELETE_NODE_FIELDREAD_CONSTRUCTORCALL",
+    "CT__DELETE_NODE_FIELDREAD_IF",
+    "CT__DELETE_NODE_FIELDREAD_INVOCATION",
+    "CT__DELETE_NODE_FIELDREAD_LOCALVARIABLE",
+    "CT__DELETE_NODE_FIELDREAD_NEWARRAY",
+    "CT__DELETE_NODE_FIELDREAD_UNARYOPERATOR",
+    "CT__DELETE_NODE_FIELDWRITE_ASSIGNMENT",
+    "CT__DELETE_NODE_FIELD_CLASS",
+    "CT__DELETE_NODE_FOREACH_BLOCK",
+    "CT__DELETE_NODE_FOR_BLOCK",
+    "CT__DELETE_NODE_IF_BLOCK",
+    "CT__DELETE_NODE_IF_CASE",
+    "CT__DELETE_NODE_INVOCATION_ASSIGNMENT",
+    "CT__DELETE_NODE_INVOCATION_BINARYOPERATOR",
+    "CT__DELETE_NODE_INVOCATION_BLOCK",
+    "CT__DELETE_NODE_INVOCATION_CASE",
+    "CT__DELETE_NODE_INVOCATION_CONDITIONAL",
+    "CT__DELETE_NODE_INVOCATION_CONSTRUCTORCALL",
+    "CT__DELETE_NODE_INVOCATION_FIELD",
+    "CT__DELETE_NODE_INVOCATION_FOREACH",
+    "CT__DELETE_NODE_INVOCATION_IF",
+    "CT__DELETE_NODE_INVOCATION_INVOCATION",
+    "CT__DELETE_NODE_INVOCATION_LOCALVARIABLE",
+    "CT__DELETE_NODE_INVOCATION_RETURN",
+    "CT__DELETE_NODE_INVOCATION_UNARYOPERATOR",
+    "CT__DELETE_NODE_LAMBDA_INVOCATION",
+    "CT__DELETE_NODE_LITERAL_ASSIGNMENT",
+    "CT__DELETE_NODE_LITERAL_BINARYOPERATOR",
+    "CT__DELETE_NODE_LITERAL_CONSTRUCTORCALL",
+    "CT__DELETE_NODE_LITERAL_FIELD",
+    "CT__DELETE_NODE_LITERAL_INVOCATION",
+    "CT__DELETE_NODE_LITERAL_LOCALVARIABLE",
+    "CT__DELETE_NODE_LITERAL_NEWARRAY",
+    "CT__DELETE_NODE_LITERAL_RETURN",
+    "CT__DELETE_NODE_LOCALVARIABLE_BLOCK",
+    "CT__DELETE_NODE_LOCALVARIABLE_FOREACH",
+    "CT__DELETE_NODE_METHOD_CLASS",
+    "CT__DELETE_NODE_NEWCLASS_INVOCATION",
+    "CT__DELETE_NODE_OPERATORASSIGNMENT_BLOCK",
+    "CT__DELETE_NODE_PARAMETER_CONSTRUCTOR",
+    "CT__DELETE_NODE_PARAMETER_METHOD",
+    "CT__DELETE_NODE_RETURN_BLOCK",
+    "CT__DELETE_NODE_SWITCH_BLOCK",
+    "CT__DELETE_NODE_SYNCHRONIZED_BLOCK",
+    "CT__DELETE_NODE_THISACCESS_FIELDWRITE",
+    "CT__DELETE_NODE_THROW_BLOCK",
+    "CT__DELETE_NODE_TRY_BLOCK",
+    "CT__DELETE_NODE_TYPEACCESS_FIELDREAD",
+    "CT__DELETE_NODE_TYPEACCESS_INVOCATION",
+    "CT__DELETE_NODE_TYPEACCESS_THISACCESS",
+    "CT__DELETE_NODE_TYPEREFERENCE_CATCHVARIABLE",
+    "CT__DELETE_NODE_TYPEREFERENCE_CLASS",
+    "CT__DELETE_NODE_TYPEREFERENCE_EXECUTABLEREFERENCE",
+    "CT__DELETE_NODE_TYPEREFERENCE_INVOCATION",
+    "CT__DELETE_NODE_TYPEREFERENCE_METHOD",
+    "CT__DELETE_NODE_TYPEREFERENCE_VARIABLEREAD",
+    "CT__DELETE_NODE_UNARYOPERATOR_BINARYOPERATOR",
+    "CT__DELETE_NODE_UNARYOPERATOR_BLOCK",
+    "CT__DELETE_NODE_UNARYOPERATOR_IF",
+    "CT__DELETE_NODE_VARIABLEREAD_ASSIGNMENT",
+    "CT__DELETE_NODE_VARIABLEREAD_BINARYOPERATOR",
+    "CT__DELETE_NODE_VARIABLEREAD_CONSTRUCTORCALL",
+    "CT__DELETE_NODE_VARIABLEREAD_FIELDREAD",
+    "CT__DELETE_NODE_VARIABLEREAD_FOREACH",
+    "CT__DELETE_NODE_VARIABLEREAD_IF",
+    "CT__DELETE_NODE_VARIABLEREAD_INVOCATION",
+    "CT__DELETE_NODE_VARIABLEREAD_RETURN",
+    "CT__DELETE_NODE_VARIABLEWRITE_ASSIGNMENT",
+    "CT__DELETE_NODE_VIRTUALELEMENT_ANNOTATION",
+    "CT__DELETE_NODE_VIRTUALELEMENT_CLASS",
+    "CT__DELETE_NODE_VIRTUALELEMENT_CONSTRUCTOR",
+    "CT__DELETE_NODE_VIRTUALELEMENT_LOCALVARIABLE",
+    "CT__DELETE_NODE_VIRTUALELEMENT_METHOD",
+    "CT__DELETE_NODE_WHILE_BLOCK",
+    "CT__DELETE_NODE_WRAPPER_ANNOTATION",
+    "CT__DELETE_NODE_WRAPPER_CLASS",
+    "CT__DELETE_NODE_WRAPPER_FIELD",
+    "CT__DELETE_NODE_WRAPPER_METHOD",
+    "CT__INSERT_NODE_ANNOTATION_CLASS",
+    "CT__INSERT_NODE_ANNOTATION_FIELD",
+    "CT__INSERT_NODE_ANNOTATION_METHOD",
+    "CT__INSERT_NODE_ANNOTATION_PARAMETER",
+    "CT__INSERT_NODE_ANONYMOUSEXECUTABLE_CLASS",
+    "CT__INSERT_NODE_ASSERT_BLOCK",
+    "CT__INSERT_NODE_ASSIGNMENT_BLOCK",
+    "CT__INSERT_NODE_BINARYOPERATOR_ASSIGNMENT",
+    "CT__INSERT_NODE_BINARYOPERATOR_BINARYOPERATOR",
+    "CT__INSERT_NODE_BINARYOPERATOR_CONDITIONAL",
+    "CT__INSERT_NODE_BINARYOPERATOR_CONSTRUCTORCALL",
+    "CT__INSERT_NODE_BINARYOPERATOR_IF",
+    "CT__INSERT_NODE_BINARYOPERATOR_INVOCATION",
+    "CT__INSERT_NODE_BINARYOPERATOR_LOCALVARIABLE",
+    "CT__INSERT_NODE_BINARYOPERATOR_RETURN",
+    "CT__INSERT_NODE_BINARYOPERATOR_WHILE",
+    "CT__INSERT_NODE_BLOCK_IF",
+    "CT__INSERT_NODE_BREAK_CASE",
+    "CT__INSERT_NODE_CASE_SWITCH",
+    "CT__INSERT_NODE_CATCH_TRY",
+    "CT__INSERT_NODE_CLASS_CLASS",
+    "CT__INSERT_NODE_CONDITIONAL_ASSIGNMENT",
+    "CT__INSERT_NODE_CONDITIONAL_BINARYOPERATOR",
+    "CT__INSERT_NODE_CONDITIONAL_INVOCATION",
+    "CT__INSERT_NODE_CONDITIONAL_LOCALVARIABLE",
+    "CT__INSERT_NODE_CONDITIONAL_RETURN",
+    "CT__INSERT_NODE_CONSTRUCTORCALL_ASSIGNMENT",
+    "CT__INSERT_NODE_CONSTRUCTORCALL_INVOCATION",
+    "CT__INSERT_NODE_CONSTRUCTORCALL_LOCALVARIABLE",
+    "CT__INSERT_NODE_CONSTRUCTORCALL_RETURN",
+    "CT__INSERT_NODE_CONSTRUCTOR_CLASS",
+    "CT__INSERT_NODE_CONTINUE_BLOCK",
+    "CT__INSERT_NODE_ENUMVALUE_ENUM",
+    "CT__INSERT_NODE_ENUM_CLASS",
+    "CT__INSERT_NODE_FIELDREAD_ASSIGNMENT",
+    "CT__INSERT_NODE_FIELDREAD_BINARYOPERATOR",
+    "CT__INSERT_NODE_FIELDREAD_CASE",
+    "CT__INSERT_NODE_FIELDREAD_CONSTRUCTORCALL",
+    "CT__INSERT_NODE_FIELDREAD_FIELD",
+    "CT__INSERT_NODE_FIELDREAD_FIELDREAD",
+    "CT__INSERT_NODE_FIELDREAD_IF",
+    "CT__INSERT_NODE_FIELDREAD_INVOCATION",
+    "CT__INSERT_NODE_FIELDREAD_NEWARRAY",
+    "CT__INSERT_NODE_FIELDREAD_RETURN",
+    "CT__INSERT_NODE_FIELDWRITE_ASSIGNMENT",
+    "CT__INSERT_NODE_FIELD_CLASS",
+    "CT__INSERT_NODE_FOREACH_BLOCK",
+    "CT__INSERT_NODE_FOR_BLOCK",
+    "CT__INSERT_NODE_IF_BLOCK",
+    "CT__INSERT_NODE_IF_CASE",
+    "CT__INSERT_NODE_INVOCATION_ASSIGNMENT",
+    "CT__INSERT_NODE_INVOCATION_BINARYOPERATOR",
+    "CT__INSERT_NODE_INVOCATION_BLOCK",
+    "CT__INSERT_NODE_INVOCATION_CASE",
+    "CT__INSERT_NODE_INVOCATION_CONDITIONAL",
+    "CT__INSERT_NODE_INVOCATION_CONSTRUCTORCALL",
+    "CT__INSERT_NODE_INVOCATION_FIELD",
+    "CT__INSERT_NODE_INVOCATION_FOREACH",
+    "CT__INSERT_NODE_INVOCATION_IF",
+    "CT__INSERT_NODE_INVOCATION_INVOCATION",
+    "CT__INSERT_NODE_INVOCATION_LOCALVARIABLE",
+    "CT__INSERT_NODE_INVOCATION_RETURN",
+    "CT__INSERT_NODE_INVOCATION_UNARYOPERATOR",
+    "CT__INSERT_NODE_LAMBDA_INVOCATION",
+    "CT__INSERT_NODE_LITERAL_ASSIGNMENT",
+    "CT__INSERT_NODE_LITERAL_BINARYOPERATOR",
+    "CT__INSERT_NODE_LITERAL_CONSTRUCTORCALL",
+    "CT__INSERT_NODE_LITERAL_FIELD",
+    "CT__INSERT_NODE_LITERAL_INVOCATION",
+    "CT__INSERT_NODE_LITERAL_LOCALVARIABLE",
+    "CT__INSERT_NODE_LITERAL_NEWARRAY",
+    "CT__INSERT_NODE_LITERAL_RETURN",
+    "CT__INSERT_NODE_LOCALVARIABLE_BLOCK",
+    "CT__INSERT_NODE_LOCALVARIABLE_CASE",
+    "CT__INSERT_NODE_LOCALVARIABLE_FOR",
+    "CT__INSERT_NODE_LOCALVARIABLE_FOREACH",
+    "CT__INSERT_NODE_METHOD_CLASS",
+    "CT__INSERT_NODE_METHOD_INTERFACE",
+    "CT__INSERT_NODE_OPERATORASSIGNMENT_BLOCK",
+    "CT__INSERT_NODE_PACKAGE_PACKAGE",
+    "CT__INSERT_NODE_PARAMETER_CONSTRUCTOR",
+    "CT__INSERT_NODE_PARAMETER_METHOD",
+    "CT__INSERT_NODE_RETURN_BLOCK",
+    "CT__INSERT_NODE_RETURN_CASE",
+    "CT__INSERT_NODE_SWITCH_BLOCK",
+    "CT__INSERT_NODE_SYNCHRONIZED_BLOCK",
+    "CT__INSERT_NODE_THROW_BLOCK",
+    "CT__INSERT_NODE_TRYWITHRESOURCE_BLOCK",
+    "CT__INSERT_NODE_TRY_BLOCK",
+    "CT__INSERT_NODE_TRY_CASE",
+    "CT__INSERT_NODE_TYPEACCESS_INVOCATION",
+    "CT__INSERT_NODE_TYPEACCESS_THISACCESS",
+    "CT__INSERT_NODE_TYPEPARAMETER_METHOD",
+    "CT__INSERT_NODE_TYPEREFERENCE_CLASS",
+    "CT__INSERT_NODE_TYPEREFERENCE_INVOCATION",
+    "CT__INSERT_NODE_TYPEREFERENCE_LOCALVARIABLE",
+    "CT__INSERT_NODE_TYPEREFERENCE_METHOD",
+    "CT__INSERT_NODE_TYPEREFERENCE_PARAMETER",
+    "CT__INSERT_NODE_TYPEREFERENCE_TYPEREFERENCE",
+    "CT__INSERT_NODE_UNARYOPERATOR_BINARYOPERATOR",
+    "CT__INSERT_NODE_UNARYOPERATOR_BLOCK",
+    "CT__INSERT_NODE_UNARYOPERATOR_IF",
+    "CT__INSERT_NODE_UNARYOPERATOR_INVOCATION",
+    "CT__INSERT_NODE_VARIABLEREAD_ASSIGNMENT",
+    "CT__INSERT_NODE_VARIABLEREAD_BINARYOPERATOR",
+    "CT__INSERT_NODE_VARIABLEREAD_CONSTRUCTORCALL",
+    "CT__INSERT_NODE_VARIABLEREAD_FIELDREAD",
+    "CT__INSERT_NODE_VARIABLEREAD_FOREACH",
+    "CT__INSERT_NODE_VARIABLEREAD_IF",
+    "CT__INSERT_NODE_VARIABLEREAD_INVOCATION",
+    "CT__INSERT_NODE_VARIABLEREAD_RETURN",
+    "CT__INSERT_NODE_VARIABLEREAD_UNARYOPERATOR",
+    "CT__INSERT_NODE_VARIABLEWRITE_ASSIGNMENT",
+    "CT__INSERT_NODE_VIRTUALELEMENT_CLASS",
+    "CT__INSERT_NODE_VIRTUALELEMENT_LOCALVARIABLE",
+    "CT__INSERT_NODE_VIRTUALELEMENT_METHOD",
+    "CT__INSERT_NODE_VIRTUALELEMENT_PARAMETER",
+    "CT__INSERT_NODE_WHILE_BLOCK",
+    "CT__INSERT_NODE_WILDCARDREFERENCE_TYPEREFERENCE",
+    "CT__INSERT_NODE_WRAPPER_ANNOTATION",
+    "CT__INSERT_NODE_WRAPPER_CLASS",
+    "CT__INSERT_NODE_WRAPPER_FIELD",
+    "CT__INSERT_NODE_WRAPPER_METHOD",
+    "CT__MOVE_TREE_ANNOTATION_METHOD",
+    "CT__MOVE_TREE_ARRAYREAD_BINARYOPERATOR",
+    "CT__MOVE_TREE_ARRAYREAD_INVOCATION",
+    "CT__MOVE_TREE_ARRAYREAD_LOCALVARIABLE",
+    "CT__MOVE_TREE_ARRAYTYPEREFERENCE_FIELD",
+    "CT__MOVE_TREE_ARRAYTYPEREFERENCE_LOCALVARIABLE",
+    "CT__MOVE_TREE_ASSIGNMENT_BLOCK",
+    "CT__MOVE_TREE_BINARYOPERATOR_ASSIGNMENT",
+    "CT__MOVE_TREE_BINARYOPERATOR_BINARYOPERATOR",
+    "CT__MOVE_TREE_BINARYOPERATOR_CONDITIONAL",
+    "CT__MOVE_TREE_BINARYOPERATOR_CONSTRUCTORCALL",
+    "CT__MOVE_TREE_BINARYOPERATOR_IF",
+    "CT__MOVE_TREE_BINARYOPERATOR_INVOCATION",
+    "CT__MOVE_TREE_BINARYOPERATOR_LOCALVARIABLE",
+    "CT__MOVE_TREE_BINARYOPERATOR_RETURN",
+    "CT__MOVE_TREE_BINARYOPERATOR_UNARYOPERATOR",
+    "CT__MOVE_TREE_BLOCK_IF",
+    "CT__MOVE_TREE_BREAK_CASE",
+    "CT__MOVE_TREE_CASE_SWITCH",
+    "CT__MOVE_TREE_CATCHVARIABLE_CATCH",
+    "CT__MOVE_TREE_CATCH_TRY",
+    "CT__MOVE_TREE_CLASS_CLASS",
+    "CT__MOVE_TREE_CONDITIONAL_INVOCATION",
+    "CT__MOVE_TREE_CONDITIONAL_LOCALVARIABLE",
+    "CT__MOVE_TREE_CONSTRUCTORCALL_ASSIGNMENT",
+    "CT__MOVE_TREE_CONSTRUCTORCALL_CONSTRUCTORCALL",
+    "CT__MOVE_TREE_CONSTRUCTORCALL_FIELD",
+    "CT__MOVE_TREE_CONSTRUCTORCALL_INVOCATION",
+    "CT__MOVE_TREE_CONSTRUCTORCALL_LOCALVARIABLE",
+    "CT__MOVE_TREE_CONSTRUCTORCALL_RETURN",
+    "CT__MOVE_TREE_CONSTRUCTOR_CLASS",
+    "CT__MOVE_TREE_ENUM_CLASS",
+    "CT__MOVE_TREE_FIELDREAD_ARRAYREAD",
+    "CT__MOVE_TREE_FIELDREAD_ASSIGNMENT",
+    "CT__MOVE_TREE_FIELDREAD_BINARYOPERATOR",
+    "CT__MOVE_TREE_FIELDREAD_CASE",
+    "CT__MOVE_TREE_FIELDREAD_CONDITIONAL",
+    "CT__MOVE_TREE_FIELDREAD_CONSTRUCTORCALL",
+    "CT__MOVE_TREE_FIELDREAD_FIELDREAD",
+    "CT__MOVE_TREE_FIELDREAD_IF",
+    "CT__MOVE_TREE_FIELDREAD_INVOCATION",
+    "CT__MOVE_TREE_FIELDREAD_LOCALVARIABLE",
+    "CT__MOVE_TREE_FIELDREAD_RETURN",
+    "CT__MOVE_TREE_FIELDREAD_UNARYOPERATOR",
+    "CT__MOVE_TREE_FIELDWRITE_ASSIGNMENT",
+    "CT__MOVE_TREE_FIELD_CLASS",
+    "CT__MOVE_TREE_FOREACH_BLOCK",
+    "CT__MOVE_TREE_FOR_BLOCK",
+    "CT__MOVE_TREE_IF_BLOCK",
+    "CT__MOVE_TREE_IF_CASE",
+    "CT__MOVE_TREE_INVOCATION_ASSIGNMENT",
+    "CT__MOVE_TREE_INVOCATION_BINARYOPERATOR",
+    "CT__MOVE_TREE_INVOCATION_BLOCK",
+    "CT__MOVE_TREE_INVOCATION_CASE",
+    "CT__MOVE_TREE_INVOCATION_CONDITIONAL",
+    "CT__MOVE_TREE_INVOCATION_CONSTRUCTORCALL",
+    "CT__MOVE_TREE_INVOCATION_FIELD",
+    "CT__MOVE_TREE_INVOCATION_FIELDREAD",
+    "CT__MOVE_TREE_INVOCATION_FOREACH",
+    "CT__MOVE_TREE_INVOCATION_IF",
+    "CT__MOVE_TREE_INVOCATION_INVOCATION",
+    "CT__MOVE_TREE_INVOCATION_LAMBDA",
+    "CT__MOVE_TREE_INVOCATION_LOCALVARIABLE",
+    "CT__MOVE_TREE_INVOCATION_NEWARRAY",
+    "CT__MOVE_TREE_INVOCATION_OPERATORASSIGNMENT",
+    "CT__MOVE_TREE_INVOCATION_RETURN",
+    "CT__MOVE_TREE_INVOCATION_UNARYOPERATOR",
+    "CT__MOVE_TREE_LAMBDA_INVOCATION",
+    "CT__MOVE_TREE_LITERAL_ASSIGNMENT",
+    "CT__MOVE_TREE_LITERAL_BINARYOPERATOR",
+    "CT__MOVE_TREE_LITERAL_CASE",
+    "CT__MOVE_TREE_LITERAL_CONDITIONAL",
+    "CT__MOVE_TREE_LITERAL_CONSTRUCTORCALL",
+    "CT__MOVE_TREE_LITERAL_FIELD",
+    "CT__MOVE_TREE_LITERAL_INVOCATION",
+    "CT__MOVE_TREE_LITERAL_LOCALVARIABLE",
+    "CT__MOVE_TREE_LITERAL_NEWARRAY",
+    "CT__MOVE_TREE_LITERAL_RETURN",
+    "CT__MOVE_TREE_LITERAL_UNARYOPERATOR",
+    "CT__MOVE_TREE_LOCALVARIABLE_BLOCK",
+    "CT__MOVE_TREE_LOCALVARIABLE_FOREACH",
+    "CT__MOVE_TREE_METHOD_CLASS",
+    "CT__MOVE_TREE_NEWARRAY_LOCALVARIABLE",
+    "CT__MOVE_TREE_OPERATORASSIGNMENT_BLOCK",
+    "CT__MOVE_TREE_PARAMETER_CONSTRUCTOR",
+    "CT__MOVE_TREE_PARAMETER_METHOD",
+    "CT__MOVE_TREE_RETURN_BLOCK",
+    "CT__MOVE_TREE_RETURN_CASE",
+    "CT__MOVE_TREE_SWITCH_BLOCK",
+    "CT__MOVE_TREE_SYNCHRONIZED_BLOCK",
+    "CT__MOVE_TREE_THISACCESS_FIELDWRITE",
+    "CT__MOVE_TREE_THISACCESS_INVOCATION",
+    "CT__MOVE_TREE_THROW_BLOCK",
+    "CT__MOVE_TREE_TRY_BLOCK",
+    "CT__MOVE_TREE_TYPEACCESS_FIELDREAD",
+    "CT__MOVE_TREE_TYPEACCESS_INVOCATION",
+    "CT__MOVE_TREE_TYPEACCESS_THISACCESS",
+    "CT__MOVE_TREE_TYPEREFERENCE_CLASS",
+    "CT__MOVE_TREE_TYPEREFERENCE_EXECUTABLEREFERENCE",
+    "CT__MOVE_TREE_TYPEREFERENCE_FIELD",
+    "CT__MOVE_TREE_TYPEREFERENCE_INVOCATION",
+    "CT__MOVE_TREE_TYPEREFERENCE_LOCALVARIABLE",
+    "CT__MOVE_TREE_TYPEREFERENCE_METHOD",
+    "CT__MOVE_TREE_TYPEREFERENCE_PARAMETER",
+    "CT__MOVE_TREE_TYPEREFERENCE_TYPEREFERENCE",
+    "CT__MOVE_TREE_TYPEREFERENCE_VARIABLEREAD",
+    "CT__MOVE_TREE_UNARYOPERATOR_BINARYOPERATOR",
+    "CT__MOVE_TREE_UNARYOPERATOR_IF",
+    "CT__MOVE_TREE_VARIABLEREAD_ASSIGNMENT",
+    "CT__MOVE_TREE_VARIABLEREAD_BINARYOPERATOR",
+    "CT__MOVE_TREE_VARIABLEREAD_CONDITIONAL",
+    "CT__MOVE_TREE_VARIABLEREAD_CONSTRUCTORCALL",
+    "CT__MOVE_TREE_VARIABLEREAD_FIELDREAD",
+    "CT__MOVE_TREE_VARIABLEREAD_FOREACH",
+    "CT__MOVE_TREE_VARIABLEREAD_IF",
+    "CT__MOVE_TREE_VARIABLEREAD_INVOCATION",
+    "CT__MOVE_TREE_VARIABLEREAD_LOCALVARIABLE",
+    "CT__MOVE_TREE_VARIABLEREAD_RETURN",
+    "CT__MOVE_TREE_VARIABLEREAD_SWITCH",
+    "CT__MOVE_TREE_VARIABLEWRITE_ASSIGNMENT",
+    "CT__MOVE_TREE_VIRTUALELEMENT_CLASS",
+    "CT__MOVE_TREE_VIRTUALELEMENT_CONSTRUCTOR",
+    "CT__MOVE_TREE_VIRTUALELEMENT_FIELD",
+    "CT__MOVE_TREE_VIRTUALELEMENT_LOCALVARIABLE",
+    "CT__MOVE_TREE_VIRTUALELEMENT_METHOD",
+    "CT__MOVE_TREE_WHILE_BLOCK",
+    "CT__MOVE_TREE_WRAPPER_CLASS",
+    "CT__MOVE_TREE_WRAPPER_FIELD",
+    "CT__MOVE_TREE_WRAPPER_LOCALVARIABLE",
+    "CT__MOVE_TREE_WRAPPER_METHOD",
+    "CT__MOVE_TREE_WRAPPER_PARAMETER",
+    "CT__UPDATE_NODE_ANNOTATION_CLASS",
+    "CT__UPDATE_NODE_ANNOTATION_FIELD",
+    "CT__UPDATE_NODE_ANNOTATION_METHOD",
+    "CT__UPDATE_NODE_ANNOTATION_PARAMETER",
+    "CT__UPDATE_NODE_ARRAYTYPEREFERENCE_LOCALVARIABLE",
+    "CT__UPDATE_NODE_ARRAYTYPEREFERENCE_PARAMETER",
+    "CT__UPDATE_NODE_BINARYOPERATOR_BINARYOPERATOR",
+    "CT__UPDATE_NODE_BINARYOPERATOR_CONDITIONAL",
+    "CT__UPDATE_NODE_BINARYOPERATOR_IF",
+    "CT__UPDATE_NODE_BINARYOPERATOR_INVOCATION",
+    "CT__UPDATE_NODE_BINARYOPERATOR_LOCALVARIABLE",
+    "CT__UPDATE_NODE_BINARYOPERATOR_RETURN",
+    "CT__UPDATE_NODE_CATCHVARIABLE_CATCH",
+    "CT__UPDATE_NODE_CLASS_CLASS",
+    "CT__UPDATE_NODE_CLASS_NEWCLASS",
+    "CT__UPDATE_NODE_CONSTRUCTORCALL_ASSIGNMENT",
+    "CT__UPDATE_NODE_CONSTRUCTORCALL_CONDITIONAL",
+    "CT__UPDATE_NODE_CONSTRUCTORCALL_CONSTRUCTORCALL",
+    "CT__UPDATE_NODE_CONSTRUCTORCALL_FIELD",
+    "CT__UPDATE_NODE_CONSTRUCTORCALL_INVOCATION",
+    "CT__UPDATE_NODE_CONSTRUCTORCALL_LOCALVARIABLE",
+    "CT__UPDATE_NODE_CONSTRUCTORCALL_RETURN",
+    "CT__UPDATE_NODE_CONSTRUCTORCALL_THROW",
+    "CT__UPDATE_NODE_FIELDREAD_ARRAYREAD",
+    "CT__UPDATE_NODE_FIELDREAD_ASSIGNMENT",
+    "CT__UPDATE_NODE_FIELDREAD_BINARYOPERATOR",
+    "CT__UPDATE_NODE_FIELDREAD_CASE",
+    "CT__UPDATE_NODE_FIELDREAD_CONDITIONAL",
+    "CT__UPDATE_NODE_FIELDREAD_CONSTRUCTORCALL",
+    "CT__UPDATE_NODE_FIELDREAD_FIELDREAD",
+    "CT__UPDATE_NODE_FIELDREAD_FOREACH",
+    "CT__UPDATE_NODE_FIELDREAD_IF",
+    "CT__UPDATE_NODE_FIELDREAD_INVOCATION",
+    "CT__UPDATE_NODE_FIELDREAD_LOCALVARIABLE",
+    "CT__UPDATE_NODE_FIELDREAD_NEWARRAY",
+    "CT__UPDATE_NODE_FIELDREAD_RETURN",
+    "CT__UPDATE_NODE_FIELDREAD_UNARYOPERATOR",
+    "CT__UPDATE_NODE_FIELDWRITE_ASSIGNMENT",
+    "CT__UPDATE_NODE_FIELD_CLASS",
+    "CT__UPDATE_NODE_INVOCATION_ASSIGNMENT",
+    "CT__UPDATE_NODE_INVOCATION_BINARYOPERATOR",
+    "CT__UPDATE_NODE_INVOCATION_BLOCK",
+    "CT__UPDATE_NODE_INVOCATION_CONDITIONAL",
+    "CT__UPDATE_NODE_INVOCATION_CONSTRUCTORCALL",
+    "CT__UPDATE_NODE_INVOCATION_FIELD",
+    "CT__UPDATE_NODE_INVOCATION_FIELDREAD",
+    "CT__UPDATE_NODE_INVOCATION_FOREACH",
+    "CT__UPDATE_NODE_INVOCATION_IF",
+    "CT__UPDATE_NODE_INVOCATION_INVOCATION",
+    "CT__UPDATE_NODE_INVOCATION_LAMBDA",
+    "CT__UPDATE_NODE_INVOCATION_LOCALVARIABLE",
+    "CT__UPDATE_NODE_INVOCATION_RETURN",
+    "CT__UPDATE_NODE_INVOCATION_UNARYOPERATOR",
+    "CT__UPDATE_NODE_LAMBDA_INVOCATION",
+    "CT__UPDATE_NODE_LAMBDA_LOCALVARIABLE",
+    "CT__UPDATE_NODE_LAMBDA_RETURN",
+    "CT__UPDATE_NODE_LITERAL_ASSIGNMENT",
+    "CT__UPDATE_NODE_LITERAL_BINARYOPERATOR",
+    "CT__UPDATE_NODE_LITERAL_CONSTRUCTORCALL",
+    "CT__UPDATE_NODE_LITERAL_FIELD",
+    "CT__UPDATE_NODE_LITERAL_INVOCATION",
+    "CT__UPDATE_NODE_LITERAL_LOCALVARIABLE",
+    "CT__UPDATE_NODE_LITERAL_NEWARRAY",
+    "CT__UPDATE_NODE_LITERAL_RETURN",
+    "CT__UPDATE_NODE_LOCALVARIABLE_BLOCK",
+    "CT__UPDATE_NODE_LOCALVARIABLE_FOREACH",
+    "CT__UPDATE_NODE_METHOD_CLASS",
+    "CT__UPDATE_NODE_NEWCLASS_FIELD",
+    "CT__UPDATE_NODE_NEWCLASS_INVOCATION",
+    "CT__UPDATE_NODE_NEWCLASS_LOCALVARIABLE",
+    "CT__UPDATE_NODE_NEWCLASS_RETURN",
+    "CT__UPDATE_NODE_PARAMETER_CONSTRUCTOR",
+    "CT__UPDATE_NODE_PARAMETER_LAMBDA",
+    "CT__UPDATE_NODE_PARAMETER_METHOD",
+    "CT__UPDATE_NODE_TYPEACCESS_BINARYOPERATOR",
+    "CT__UPDATE_NODE_TYPEACCESS_FIELDREAD",
+    "CT__UPDATE_NODE_TYPEACCESS_INVOCATION",
+    "CT__UPDATE_NODE_TYPEACCESS_THISACCESS",
+    "CT__UPDATE_NODE_TYPEREFERENCE_CATCHVARIABLE",
+    "CT__UPDATE_NODE_TYPEREFERENCE_CLASS",
+    "CT__UPDATE_NODE_TYPEREFERENCE_EXECUTABLEREFERENCE",
+    "CT__UPDATE_NODE_TYPEREFERENCE_FIELD",
+    "CT__UPDATE_NODE_TYPEREFERENCE_INVOCATION",
+    "CT__UPDATE_NODE_TYPEREFERENCE_LOCALVARIABLE",
+    "CT__UPDATE_NODE_TYPEREFERENCE_METHOD",
+    "CT__UPDATE_NODE_TYPEREFERENCE_PARAMETER",
+    "CT__UPDATE_NODE_TYPEREFERENCE_TYPEREFERENCE",
+    "CT__UPDATE_NODE_TYPEREFERENCE_VARIABLEREAD",
+    "CT__UPDATE_NODE_VARIABLEREAD_ASSIGNMENT",
+    "CT__UPDATE_NODE_VARIABLEREAD_BINARYOPERATOR",
+    "CT__UPDATE_NODE_VARIABLEREAD_CONSTRUCTORCALL",
+    "CT__UPDATE_NODE_VARIABLEREAD_FIELDREAD",
+    "CT__UPDATE_NODE_VARIABLEREAD_FOREACH",
+    "CT__UPDATE_NODE_VARIABLEREAD_INVOCATION",
+    "CT__UPDATE_NODE_VARIABLEREAD_RETURN",
+    "CT__UPDATE_NODE_VARIABLEWRITE_ASSIGNMENT",
+    "CT__UPDATE_NODE_WILDCARDREFERENCE_TYPEREFERENCE",
+    "CT__UPDATE_NODE_WRAPPER_ANNOTATION",
+    "CT__UPDATE_NODE_WRAPPER_CLASS",
+    "CT__UPDATE_NODE_WRAPPER_FIELD",
+    "CT__UPDATE_NODE_WRAPPER_METHOD"
+  ],
+  "metadata_columns": [
+    "sample_id",
+    "anchor_id",
+    "project",
+    "file_path",
+    "source_commit",
+    "target_commit",
+    "source_timestamp",
+    "target_timestamp",
+    "cve_ids",
+    "provenance",
+    "SLICE_OFFSET",
+    "TRANSITION_LABEL"
+  ],
+  "transitions": 7028,
+  "anchors": 860,
+  "exclusions": [
+    {
+      "sample_id": "2fbdca3491298be277a5_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "2fbdca3491298be277a5_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "2925a0c299e302a1a2fc_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "2925a0c299e302a1a2fc_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "3e91f2c89db77cd93684_t-10",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "3e91f2c89db77cd93684_t-9",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "7ea3eae806b39a911ead_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "7ea3eae806b39a911ead_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "af4cdfddec82081db0bf_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "af4cdfddec82081db0bf_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "bfe2774bcaa2b64edc05_t-10",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "bfe2774bcaa2b64edc05_t-9",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "bfe2774bcaa2b64edc05_t-8",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "bfe2774bcaa2b64edc05_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "bfe2774bcaa2b64edc05_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "bfe2774bcaa2b64edc05_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "bfe2774bcaa2b64edc05_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "bfe2774bcaa2b64edc05_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "bfe2774bcaa2b64edc05_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "bfe2774bcaa2b64edc05_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "bfe2774bcaa2b64edc05_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "e212dafbc3f35b254d9f_t-8",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "e212dafbc3f35b254d9f_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "e212dafbc3f35b254d9f_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "e212dafbc3f35b254d9f_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "e212dafbc3f35b254d9f_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "e212dafbc3f35b254d9f_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "e212dafbc3f35b254d9f_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "e212dafbc3f35b254d9f_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "e212dafbc3f35b254d9f_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "82f1551b343600f9c408_t-10",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "82f1551b343600f9c408_t-9",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "82f1551b343600f9c408_t-8",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "82f1551b343600f9c408_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "82f1551b343600f9c408_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "82f1551b343600f9c408_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "82f1551b343600f9c408_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "82f1551b343600f9c408_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "82f1551b343600f9c408_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "82f1551b343600f9c408_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "82f1551b343600f9c408_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "ca87934c70108ffc18c0_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "ca87934c70108ffc18c0_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "cc7c76ccd459833f5062_t-10",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "8559a85287461c4f74bb_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "8559a85287461c4f74bb_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1842371e688a65a746e8_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1842371e688a65a746e8_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1842371e688a65a746e8_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1842371e688a65a746e8_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1842371e688a65a746e8_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "5e272612aac2cd896433_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "5e272612aac2cd896433_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "bc61c5238ce1e590eedc_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "bc61c5238ce1e590eedc_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "bc61c5238ce1e590eedc_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "bc61c5238ce1e590eedc_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "3f34189b61259c2d2aa4_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "3f34189b61259c2d2aa4_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "72b4ae1d297883e1e0a4_t-8",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "72b4ae1d297883e1e0a4_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "72b4ae1d297883e1e0a4_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "72b4ae1d297883e1e0a4_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "72b4ae1d297883e1e0a4_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "72b4ae1d297883e1e0a4_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "72b4ae1d297883e1e0a4_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "72b4ae1d297883e1e0a4_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "72b4ae1d297883e1e0a4_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "5471a791e8778f50ee23_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "5471a791e8778f50ee23_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "c25ae4d6d504ca4f2441_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "c25ae4d6d504ca4f2441_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "c25ae4d6d504ca4f2441_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "c25ae4d6d504ca4f2441_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "c25ae4d6d504ca4f2441_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "daca2beaac9675274bed_t-10",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "daca2beaac9675274bed_t-9",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "daca2beaac9675274bed_t-8",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "daca2beaac9675274bed_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "daca2beaac9675274bed_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "daca2beaac9675274bed_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "daca2beaac9675274bed_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "daca2beaac9675274bed_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "daca2beaac9675274bed_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "daca2beaac9675274bed_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "daca2beaac9675274bed_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9537297566bfc86e9a7a_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9537297566bfc86e9a7a_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "49e0b4fef75dd2d9e37c_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "49e0b4fef75dd2d9e37c_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "987c31f6352ff1d1a660_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "987c31f6352ff1d1a660_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9cba9dcafa0fb48fe763_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9cba9dcafa0fb48fe763_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "6f6627e826c000878c98_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "6f6627e826c000878c98_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "f3fa072eeb911b7ff959_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "f3fa072eeb911b7ff959_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "f3fa072eeb911b7ff959_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "6b59f9e4d161ff547ae5_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "6b59f9e4d161ff547ae5_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "6b59f9e4d161ff547ae5_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "6b59f9e4d161ff547ae5_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "eafd6aa2dd270c621946_t-10",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "eafd6aa2dd270c621946_t-9",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "eafd6aa2dd270c621946_t-8",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "eafd6aa2dd270c621946_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "eafd6aa2dd270c621946_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "eafd6aa2dd270c621946_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "eafd6aa2dd270c621946_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "eafd6aa2dd270c621946_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "eafd6aa2dd270c621946_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "eafd6aa2dd270c621946_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "eafd6aa2dd270c621946_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "343e741442188fb29259_t-10",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "343e741442188fb29259_t-9",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "343e741442188fb29259_t-8",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "343e741442188fb29259_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "343e741442188fb29259_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "343e741442188fb29259_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "343e741442188fb29259_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "343e741442188fb29259_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "343e741442188fb29259_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "343e741442188fb29259_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "343e741442188fb29259_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "fc938b0665f32573a68d_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "fc938b0665f32573a68d_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "619f041b56ba759e74ec_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "619f041b56ba759e74ec_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "0ea624d3fe4e62d94d7c_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "0ea624d3fe4e62d94d7c_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "d20e355451f308b1e492_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "d20e355451f308b1e492_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "4d0b93e5e05f38e15c7b_t-10",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "4d0b93e5e05f38e15c7b_t-9",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "4d0b93e5e05f38e15c7b_t-8",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "4d0b93e5e05f38e15c7b_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "4d0b93e5e05f38e15c7b_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "4d0b93e5e05f38e15c7b_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "4d0b93e5e05f38e15c7b_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "4d0b93e5e05f38e15c7b_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "4d0b93e5e05f38e15c7b_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "4d0b93e5e05f38e15c7b_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "4d0b93e5e05f38e15c7b_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "766be27764831969bbdc_t-10",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "766be27764831969bbdc_t-9",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "766be27764831969bbdc_t-8",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "766be27764831969bbdc_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "766be27764831969bbdc_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "766be27764831969bbdc_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "766be27764831969bbdc_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "766be27764831969bbdc_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "766be27764831969bbdc_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "766be27764831969bbdc_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "766be27764831969bbdc_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "a9f120970975ccbf58ed_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "a9f120970975ccbf58ed_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "a9f120970975ccbf58ed_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "a9f120970975ccbf58ed_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "a9f120970975ccbf58ed_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "a9f120970975ccbf58ed_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "a9f120970975ccbf58ed_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "a9f120970975ccbf58ed_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "3d6c5733d22bb755567e_t-10",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "3d6c5733d22bb755567e_t-9",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "3d6c5733d22bb755567e_t-8",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "3d6c5733d22bb755567e_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "3d6c5733d22bb755567e_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "3d6c5733d22bb755567e_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "3d6c5733d22bb755567e_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "3d6c5733d22bb755567e_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "3d6c5733d22bb755567e_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "3d6c5733d22bb755567e_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "3d6c5733d22bb755567e_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "8bbb1af0a598218b6d89_t-10",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "8bbb1af0a598218b6d89_t-9",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "8bbb1af0a598218b6d89_t-8",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "8bbb1af0a598218b6d89_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "8bbb1af0a598218b6d89_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "8bbb1af0a598218b6d89_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "8bbb1af0a598218b6d89_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "8bbb1af0a598218b6d89_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "8bbb1af0a598218b6d89_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "8bbb1af0a598218b6d89_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "8bbb1af0a598218b6d89_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "02063a65cdffd1f04c61_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "02063a65cdffd1f04c61_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "02063a65cdffd1f04c61_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "e3addd8180af05b4866c_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "e3addd8180af05b4866c_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "e3addd8180af05b4866c_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "e3addd8180af05b4866c_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "e3addd8180af05b4866c_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "e3addd8180af05b4866c_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "476be3111d895c590555_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "476be3111d895c590555_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "476be3111d895c590555_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "476be3111d895c590555_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "cbb4754bf04c871489e2_t-10",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "cbb4754bf04c871489e2_t-9",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "cbb4754bf04c871489e2_t-8",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "cbb4754bf04c871489e2_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "cbb4754bf04c871489e2_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "cbb4754bf04c871489e2_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "cbb4754bf04c871489e2_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "cbb4754bf04c871489e2_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "cbb4754bf04c871489e2_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "cbb4754bf04c871489e2_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "cbb4754bf04c871489e2_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1823d49e8095b66a5b7e_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1823d49e8095b66a5b7e_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1823d49e8095b66a5b7e_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1823d49e8095b66a5b7e_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1823d49e8095b66a5b7e_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1823d49e8095b66a5b7e_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1823d49e8095b66a5b7e_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "519c781546d39d312b02_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "519c781546d39d312b02_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "978a091a323365bdb13f_t-10",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "978a091a323365bdb13f_t-9",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "978a091a323365bdb13f_t-8",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "978a091a323365bdb13f_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "978a091a323365bdb13f_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "978a091a323365bdb13f_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "978a091a323365bdb13f_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "978a091a323365bdb13f_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "978a091a323365bdb13f_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "978a091a323365bdb13f_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "978a091a323365bdb13f_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "52809fdea0ba949ef3bf_t-10",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "52809fdea0ba949ef3bf_t-9",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "52809fdea0ba949ef3bf_t-8",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "52809fdea0ba949ef3bf_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "52809fdea0ba949ef3bf_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "52809fdea0ba949ef3bf_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "52809fdea0ba949ef3bf_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "52809fdea0ba949ef3bf_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "52809fdea0ba949ef3bf_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "52809fdea0ba949ef3bf_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "52809fdea0ba949ef3bf_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "7e049b6bebcb4993ed65_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "7e049b6bebcb4993ed65_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "7e049b6bebcb4993ed65_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1ceec808ae40772fabb7_t-10",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1ceec808ae40772fabb7_t-9",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1ceec808ae40772fabb7_t-8",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1ceec808ae40772fabb7_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1ceec808ae40772fabb7_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1ceec808ae40772fabb7_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1ceec808ae40772fabb7_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1ceec808ae40772fabb7_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1ceec808ae40772fabb7_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1ceec808ae40772fabb7_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1ceec808ae40772fabb7_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "10a3c0a17b2d37618b55_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "10a3c0a17b2d37618b55_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "10a3c0a17b2d37618b55_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "10a3c0a17b2d37618b55_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "10a3c0a17b2d37618b55_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "10a3c0a17b2d37618b55_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "10a3c0a17b2d37618b55_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "10a3c0a17b2d37618b55_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "3d624b62eb8da6478b82_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "3d624b62eb8da6478b82_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "ddceb23dcf801d86eefb_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "ddceb23dcf801d86eefb_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9da59d01bb065167a06f_t-10",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9da59d01bb065167a06f_t-9",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9da59d01bb065167a06f_t-8",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9da59d01bb065167a06f_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9da59d01bb065167a06f_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9da59d01bb065167a06f_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9da59d01bb065167a06f_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9da59d01bb065167a06f_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9da59d01bb065167a06f_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9da59d01bb065167a06f_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9da59d01bb065167a06f_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "deff86eb439b0cd0e299_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "deff86eb439b0cd0e299_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "ae27b0b01fbf995d90ad_t-10",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "ae27b0b01fbf995d90ad_t-9",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "ae27b0b01fbf995d90ad_t-8",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "ae27b0b01fbf995d90ad_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "ae27b0b01fbf995d90ad_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "ae27b0b01fbf995d90ad_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "ae27b0b01fbf995d90ad_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "ae27b0b01fbf995d90ad_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "ae27b0b01fbf995d90ad_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "ae27b0b01fbf995d90ad_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "ae27b0b01fbf995d90ad_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "7ae01f752b72fb2d04ea_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "7ae01f752b72fb2d04ea_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "7ae01f752b72fb2d04ea_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "a82a5dd6d91bbf523c90_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "a82a5dd6d91bbf523c90_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "a82a5dd6d91bbf523c90_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "a82a5dd6d91bbf523c90_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "a82a5dd6d91bbf523c90_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "a82a5dd6d91bbf523c90_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "370b004da60fbfa294e2_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "370b004da60fbfa294e2_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "370b004da60fbfa294e2_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "8cf1f34220804998837e_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "8cf1f34220804998837e_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "8cf1f34220804998837e_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9a0c53ca8d9aa2746391_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9a0c53ca8d9aa2746391_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9a0c53ca8d9aa2746391_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9a0c53ca8d9aa2746391_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9a0c53ca8d9aa2746391_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9a0c53ca8d9aa2746391_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "9a0c53ca8d9aa2746391_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1c6873954da2c2919e77_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1c6873954da2c2919e77_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1c6873954da2c2919e77_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1c6873954da2c2919e77_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1c6873954da2c2919e77_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "1c6873954da2c2919e77_t0",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "d11b9a5162f535e4d857_t-10",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "d11b9a5162f535e4d857_t-9",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "d11b9a5162f535e4d857_t-8",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "d11b9a5162f535e4d857_t-7",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "d11b9a5162f535e4d857_t-6",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "d11b9a5162f535e4d857_t-5",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "d11b9a5162f535e4d857_t-4",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "d11b9a5162f535e4d857_t-3",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "d11b9a5162f535e4d857_t-2",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "d11b9a5162f535e4d857_t-1",
+      "reason": "missing Coming output"
+    },
+    {
+      "sample_id": "d11b9a5162f535e4d857_t0",
+      "reason": "missing Coming output"
+    }
+  ]
+}
