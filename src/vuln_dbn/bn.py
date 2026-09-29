@@ -188,6 +188,11 @@ def train_from_csv(
         "constraints -- not independent causal claims.",
         "epsilon": epsilon,
         "max_iter": max_iter,
+        # from CheckpointHillClimbSearch's own graph metadata -- otherwise only visible by
+        # loading the joblib model directly, which is inconvenient for comparing many runs
+        "search_status": model.graph.get("search_status"),
+        "search_iterations": model.graph.get("search_iterations"),
+        "last_best_score_delta": model.graph.get("last_best_score_delta"),
     }
     write_json(summary_path, summary)
     return summary
