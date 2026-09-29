@@ -3,11 +3,13 @@ from __future__ import annotations
 import argparse
 import json
 
+from .benchmark import benchmark_scaling, write_fit
 from .bn import train_from_csv, write_prediction
 from .bootstrap import bootstrap_edges
 from .constants import METADATA_COLUMNS
 from .evaluate import evaluate_holdout
 from .graph import write_dot
+from .select import select_top_features
 from .significance import mutual_information_report
 
 
@@ -82,6 +84,29 @@ def _parser() -> argparse.ArgumentParser:
     dot = commands.add_parser("dot", help="Export a learned structure summary as Graphviz DOT")
     dot.add_argument("--summary", required=True)
     dot.add_argument("--output", required=True)
+
+    select = commands.add_parser("select-features", help="Write a reduced dataset keeping only the top-N MI-ranked nodes")
+    select.add_argument("--dataset", required=True)
+    select.add_argument("--output", required=True)
+    select.add_argument("--sink", required=True)
+    _add_metadata_arg(select)
+    select.add_argument("--n", type=int, required=True)
+    select.add_argument("--random-state", type=int, default=42)
+
+    benchmark = commands.add_parser("benchmark", help="Time one cold hill-climbing iteration across a sweep of N values")
+    benchmark.add_argument("--dataset", required=True)
+    benchmark.add_argument("--output", required=True)
+    benchmark.add_argument("--sink", required=True)
+    _add_metadata_arg(benchmark)
+    benchmark.add_argument("--n-values", required=True, help="Comma-separated variable counts to test, e.g. 20,50,100,200,400")
+    benchmark.add_argument("--score", choices=["bic-d", "bdeu"], default="bic-d")
+    benchmark.add_argument("--max-indegree", type=int, default=4)
+    benchmark.add_argument("--equivalent-sample-size", type=float, default=5.0)
+    benchmark.add_argument("--random-state", type=int, default=42)
+
+    fit = commands.add_parser("fit", help="Fit a quadratic to a benchmark report for extrapolating to untested N")
+    fit.add_argument("--report", required=True, help="CSV produced by `benchmark`")
+    fit.add_argument("--output", required=True)
     return parser
 
 
@@ -143,6 +168,32 @@ def main(argv: list[str] | None = None) -> None:
     elif args.command == "dot":
         write_dot(args.summary, args.output)
         message = {"output": args.output}
+    elif args.command == "select-features":
+        nodes = select_top_features(
+            args.dataset,
+            args.output,
+            _metadata_columns(args.metadata_columns),
+            args.sink,
+            args.n,
+            random_state=args.random_state,
+        )
+        message = {"selected": len(nodes), "output": args.output}
+    elif args.command == "benchmark":
+        n_values = [int(v.strip()) for v in args.n_values.split(",") if v.strip()]
+        report = benchmark_scaling(
+            args.dataset,
+            args.output,
+            _metadata_columns(args.metadata_columns),
+            args.sink,
+            n_values,
+            score=args.score,
+            max_indegree=args.max_indegree,
+            equivalent_sample_size=args.equivalent_sample_size,
+            random_state=args.random_state,
+        )
+        message = {"points": len(report), "output": args.output}
+    elif args.command == "fit":
+        message = write_fit(args.report, args.output)
     else:  # pragma: no cover
         raise AssertionError(args.command)
     print(json.dumps(message, indent=2, default=str))
