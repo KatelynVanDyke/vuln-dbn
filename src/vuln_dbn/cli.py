@@ -84,6 +84,11 @@ def _parser() -> argparse.ArgumentParser:
     dot = commands.add_parser("dot", help="Export a learned structure summary as Graphviz DOT")
     dot.add_argument("--summary", required=True)
     dot.add_argument("--output", required=True)
+    dot.add_argument(
+        "--focus-sink-hops",
+        type=int,
+        help="Only render the sink plus its ancestors within this many hops (needs a sink-learned summary)",
+    )
 
     select = commands.add_parser("select-features", help="Write a reduced dataset keeping only the top-N MI-ranked nodes")
     select.add_argument("--dataset", required=True)
@@ -166,7 +171,7 @@ def main(argv: list[str] | None = None) -> None:
             equivalent_sample_size=args.equivalent_sample_size,
         )
     elif args.command == "dot":
-        write_dot(args.summary, args.output)
+        write_dot(args.summary, args.output, focus_sink_hops=args.focus_sink_hops)
         message = {"output": args.output}
     elif args.command == "select-features":
         nodes = select_top_features(
